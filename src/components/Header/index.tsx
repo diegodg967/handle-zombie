@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import Logo from '../Logo';
 import { FaSearch } from 'react-icons/fa';
 import { IoMdCloseCircleOutline } from 'react-icons/io';
@@ -9,6 +9,15 @@ import { Props } from './types';
 const Header: React.FC<Props> = ({ onSearch, onInfectedFilter }) => {
   const [isSearching, setIsSearching] = useState(false);
   const [isInfectedFiltering, setIsInfectedFiltering] = useState(false);
+
+  useEffect(() => {
+    if (!isInfectedFiltering) {
+      onSearch('');
+      return;
+    }
+    handleInfectedFilter();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isInfectedFiltering]);
 
   const openSearch = () => {
     setIsSearching(true);
@@ -24,17 +33,9 @@ const Header: React.FC<Props> = ({ onSearch, onInfectedFilter }) => {
     onSearch(value);
   };
 
-  const handleInfectedFilter = useCallback(() => {
+  const handleInfectedFilter = () => {
     onInfectedFilter();
-  }, [onInfectedFilter]);
-
-  useEffect(() => {
-    if (!isInfectedFiltering) {
-      onSearch('');
-      return;
-    }
-    handleInfectedFilter();
-  }, [isInfectedFiltering, handleInfectedFilter, onSearch]);
+  };
 
   return (    
     isSearching ? 
