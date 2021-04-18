@@ -6,6 +6,12 @@ export default createGlobalStyle`
   }
 `;
 
+export const Wrapper = styled.div`
+  display: flex;
+  height: 100vh;
+  background: #292737;
+`;
+
 export const Container = styled.div`
   display: flex;
   align-items: center;

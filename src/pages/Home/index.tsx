@@ -2,7 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import Button from '../../components/Button';
 import Logo from '../../components/Logo';
-import GlobalStyle, { Container, Grid } from './styles';
+import GlobalStyle, { Wrapper, Container, Grid } from './styles';
 
 const Home: React.FC = () => {
   const history = useHistory();
@@ -12,7 +12,7 @@ const Home: React.FC = () => {
   };
 
   return (
-    <>
+    <Wrapper>
       <GlobalStyle />
       <Container>
         <Grid />
@@ -23,7 +23,7 @@ const Home: React.FC = () => {
           <Button onClick={handleStart}>Start</Button>
         </Grid>
       </Container>
-    </>
+    </Wrapper>
   );
 };
 
