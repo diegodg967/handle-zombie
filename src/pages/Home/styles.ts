@@ -1,4 +1,10 @@
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
+
+export default createGlobalStyle`
+  html, body, #root {
+    height: 100%
+  }
+`;
 
 export const Container = styled.div`
   display: flex;
@@ -8,13 +14,10 @@ export const Container = styled.div`
   flex: 1;
 `;
 
-export const Logo = styled.span`
-  margin: 100px 0;
-  font-family: 'VT323', monospace;
-  font-size: 50px;
-  color: #fff;
-
-  strong {
-    color: #00FF83;
-  }
+export const Grid = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  height: 33%;
 `;

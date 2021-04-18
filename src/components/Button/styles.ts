@@ -13,10 +13,16 @@ export const StyledButton = styled.button`
   transition: all .2s;
 
   &:hover {
-    background: #FF47BF;
+    background: #ff47bf;
   }
 
   &:active {
-    background: #FF47BF;
+    background: #ff47bf;
   }  
+
+  &:disabled {
+    background: none;
+    color: #ff47bf;
+    box-shadow: none;
+  }
 `;

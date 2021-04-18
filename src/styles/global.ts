@@ -13,10 +13,6 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased;
   }
 
-  html, body, #root {
-    height: 100%
-  }
-
   #root {
     display: flex;
     flex-direction: column;
