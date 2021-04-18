@@ -6,7 +6,7 @@
 
 ## Layout
 
-The application and components layout is available on Figma:
+The application and components layout are available on Figma:
 https://www.figma.com/file/jbXN3iIzGZochX91PzJmOZ/handleZombie?node-id=1%3A2
 
 ## Application Features
@@ -20,7 +20,7 @@ https://www.figma.com/file/jbXN3iIzGZochX91PzJmOZ/handleZombie?node-id=1%3A2
 ## Install and run
 ```yarn```
 
-In the project directory, install the dependencies and dev dependencies.
+Install the dependencies and dev dependencies.
 
 ```yarn start```
 
