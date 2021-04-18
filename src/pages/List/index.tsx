@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import GlobalStyle from './styles';
+import { Wrapper, StyledList } from './styles';
 import Header from '../../components/Header';
 import Card from '../../components/Card';
 import { data } from '../../constants';
@@ -37,13 +37,12 @@ const List: React.FC = () => {
   };
 
   return (
-    <>
-      <GlobalStyle />
+    <Wrapper>
       <Header
         onSearch={handleSearch}
         onInfectedFilter={handleInfectedFilter}
       />
-      <ul>
+      <StyledList>
         {
           characters.map(item => (
             <li key={item.id}>
@@ -57,8 +56,8 @@ const List: React.FC = () => {
             </li>
           ))
         }
-      </ul>    
-    </>
+      </StyledList>    
+    </Wrapper>
   )
 };
 
