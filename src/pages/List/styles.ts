@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import { SCREEN_SMALL } from '../../constants';
 
 export default createGlobalStyle`

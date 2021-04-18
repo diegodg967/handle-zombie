@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import GlobalStyle from './styles';
 import Header from '../../components/Header';
 import Card from '../../components/Card';

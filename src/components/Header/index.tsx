@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import React, { useState, useEffect, useCallback } from 'react';
 import Logo from '../Logo';
 import { FaSearch } from 'react-icons/fa';
 import { IoMdCloseCircleOutline } from 'react-icons/io';
@@ -10,14 +9,6 @@ import { Props } from './types';
 const Header: React.FC<Props> = ({ onSearch, onInfectedFilter }) => {
   const [isSearching, setIsSearching] = useState(false);
   const [isInfectedFiltering, setIsInfectedFiltering] = useState(false);
-
-  useEffect(() => {
-    if (!isInfectedFiltering) {
-      onSearch('');
-      return;
-    }
-    handleInfectedFilter();
-  }, [isInfectedFiltering]);
 
   const openSearch = () => {
     setIsSearching(true);
@@ -33,9 +24,17 @@ const Header: React.FC<Props> = ({ onSearch, onInfectedFilter }) => {
     onSearch(value);
   };
 
-  const handleInfectedFilter = () => {
+  const handleInfectedFilter = useCallback(() => {
     onInfectedFilter();
-  };
+  }, [onInfectedFilter]);
+
+  useEffect(() => {
+    if (!isInfectedFiltering) {
+      onSearch('');
+      return;
+    }
+    handleInfectedFilter();
+  }, [isInfectedFiltering, handleInfectedFilter, onSearch]);
 
   return (    
     isSearching ? 
