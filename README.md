@@ -20,7 +20,7 @@ https://www.figma.com/file/jbXN3iIzGZochX91PzJmOZ/handleZombie?node-id=1%3A2
 ## Install and run
 ```yarn```
 
-In the project directory, install the dependencies and dev dependencies with the command:
+In the project directory, install the dependencies and dev dependencies.
 
 ```yarn start```
 
