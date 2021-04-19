@@ -17,6 +17,10 @@ https://www.figma.com/file/jbXN3iIzGZochX91PzJmOZ/handleZombie?node-id=1%3A2
 - Search by name
 - Filter by infected
 
+## Demo
+
+https://handle-zombie.vercel.app/
+
 ## Install and run
 ```yarn```
 
