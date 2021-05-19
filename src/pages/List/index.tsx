@@ -24,8 +24,7 @@ const List: React.FC = () => {
   const handleSearch = (value: string) => {
     console.log('handleSearch wow!', value);
     const filteredCharacters = data.filter(character => {
-      const compare = character.name.toLowerCase();
-      return compare.includes(value);
+      return character.name.includes(value);
     });
     setCharacters(filteredCharacters);
   };
