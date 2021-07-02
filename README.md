@@ -2,7 +2,7 @@
 
 **handleZombie( )** is a ReactJS example for code and good practices analyses.
 
-![handleZombie( )](https://media2.giphy.com/media/0JnK3JFe5xhfsSoPv0/giphy.gif?cid=790b761198aa204bd8fa29f06c1236ce88431a49bc9abf36&rid=giphy.gif&ct=g)
+![handleZombie( )](https://s6.gifyu.com/images/handle-zombie.gif)
 
 ## Layout
 
